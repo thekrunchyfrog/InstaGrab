@@ -14,8 +14,6 @@ def grabImage(url):
 
     pic = soup.find(property="og:image")
 
-    print pic
-
     imgUrl = pic['content']
     urllib.urlretrieve(imgUrl, os.path.basename(imgUrl))
 
